@@ -1,0 +1,17 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .trans {
+    transition: all 2s;
+    font-size: 1rem;
+    background-color: red;
+  }
+
+  .myflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+} */

@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Playfair+Display&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .activeNavlink {
+    text-decoration: underline !important;
+    text-decoration-color: yellow !important;
+    text-underline-offset: 8px !important;
+  }
+
+  .navlinkFont {
+    font-family: "Grape Nuts", cursive;
+  }
+  .navlinkFont:hover {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-underline-offset: 8px;
+  }
+  .navheadFont {
+    font-family: "Playfair Display", serif;
+  }
+  .navheadFont:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(141, 236, 250);
+    text-underline-offset: 8px;
+  }
+
+  body::-webkit-scrollbar {
+    width: 2px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #fccece;
+  }
+  body::-webkit-scrollbar-track {
+    background-color: rgb(254, 152, 0);
+  }
+
+  .trans {
+    transition: all 2s;
+    font-size: 1rem;
+  }
+
+  .mytextstyle {
+    background-image: linear-gradient(100deg, #04fbff 0%, #fc00ff 100%);
+  }
+
+  .myflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .myborder {
+    @apply border-b-[0.2rem] border-b-lime-200;
+    @apply border-t-[1vmax] border-t-lime-400;
+    @apply border-l-[0.1rem] border-l-fuchsia-600;
+    @apply border-r-[0.3rem] border-r-cyan-500;
+  }
+
+  @keyframes techStackAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(-50%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    75% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .tech-stack-container {
+    overflow: hidden;
+  }
+
+  .tech-stack-item {
+    display: block;
+    white-space: nowrap;
+    animation: techStackAnimation 10s linear infinite forwards; /* Adjust the duration as needed */
+  }
+  .mytooltip {
+    font-family: "Playfair Display";
+    font-size: 0.7rem !important;
+  }
+  .myproject {
+    display: inline-block;
+    /* transition: transform s; */
+    animation: floating 5s infinite;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    25% {
+      transform: translate(-40px, -40px);
+    }
+    50% {
+      transform: translate(40px, -40px);
+    }
+  }
+}
